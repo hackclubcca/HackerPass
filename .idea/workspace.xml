@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5cce8af-4d0d-4acc-8588-a765a2bccb2b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.scss" beforeDir="false" afterPath="$PROJECT_DIR$/config/colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fields.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/fields.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-    </list>
+    <list default="true" id="e5cce8af-4d0d-4acc-8588-a765a2bccb2b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/colors.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+            <state>
+              <caret column="20" selection-start-column="14" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -68,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/fields.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="159">
@@ -138,6 +131,7 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/backend/database.js" />
         <option value="$PROJECT_DIR$/config/fields.js" />
+        <option value="$PROJECT_DIR$/config/colors.scss" />
       </list>
     </option>
   </component>
@@ -242,12 +236,12 @@
       <workItem from="1566844132483" duration="597000" />
       <workItem from="1566853230819" duration="8058000" />
       <workItem from="1566863103696" duration="1953000" />
-      <workItem from="1566869172377" duration="1252000" />
+      <workItem from="1566869172377" duration="1376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28880000" />
+    <option name="totallyTimeSpent" value="29004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -415,17 +409,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/colors.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/fields.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
           <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="14" selection-end-column="20" />
         </state>
       </provider>
     </entry>
