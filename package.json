@@ -3,11 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "mongodb": "^3.3.1",
+    "mongoose": "^5.6.11",
+    "node-sass": "^4.12.0",
     "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "wow.js": "^1.2.2"
   },
   "scripts": {
+    "server": "node backend/database.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
