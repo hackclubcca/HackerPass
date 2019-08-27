@@ -5,7 +5,6 @@ const path = require('path');
 var cors = require('cors');
 require('dotenv').config();
 
-const API_PORT = 3000;
 const app = express();
 app.use(cors());
 app.use( bodyParser.json() );       // to support JSON-encoded bodies

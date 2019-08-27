@@ -55,9 +55,22 @@ class HackerForm extends React.Component {
                 {fields.map((value, index) => {
                     return (
                         <Form.Group controlId={value.key}>
-                            <Form.Label>{value.label}</Form.Label>
-                            <Form.Control onChange={this.handleChange} required={value.required} type={value.type} placeholder={value.default_value ? value.default_value : "Enter " + value.type } name={value.key} className={"wow fadeInUp"} as={value.type == "textarea" ? "textarea" : undefined} />
-                        </Form.Group>
+                            <Form.Label required={value.required}>{value.label}</Form.Label>
+                            {value.type == "dropdown" ?
+                                (
+                                    <Form.Control as="select" className={"option"}>
+                                        {value.options.map((option) => {
+                                            return <option>{option}</option>;
+                                        })}
+                                    </Form.Control>
+                                ) : (
+                                    <Form.Control onChange={this.handleChange} required={value.required} type={value.type}
+                                              placeholder={value.default_value ? value.default_value : "Enter " + value.type}
+                                              name={value.key} className={"wow fadeInUp"}
+                                              as={value.type == "textarea" ? "textarea" : undefined} minlength={value.min_length} maxlength={value.max_length} min={value.min} max={value.max}/>
+                                    )
+                            }
+                                </Form.Group>
                     )
                 })}
                 <div className="col-sm-12">

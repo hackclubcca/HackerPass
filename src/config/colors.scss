@@ -1,5 +1,8 @@
-$background: #fb0074;
-$logo: url("http://www.ravenhack.org/static/svg/ravenhacklogo.svg");
+$background: #ffa907;
+$logo: url("http://www.ravenhack.org/static/svg/ravenhackfeather.svg");
 $text-color: #fff;
 $primary-color: darken($background, 20);
 $secondary-color: darken($primary-color, 20);
+
+//optional
+//$background-image: linear-gradient(90deg, #d53032, #fb0074);
