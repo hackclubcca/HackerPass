@@ -19,7 +19,7 @@
   },
   "scripts": {
     "server": "node backend/database.js",
-    "start": "react-scripts start",
+    "start": "node backend/database.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
