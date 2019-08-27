@@ -48,5 +48,4 @@ export const FORM_FIELDS =  [
         default_value: "Your Resume",
         required: false
     },
-
 ];

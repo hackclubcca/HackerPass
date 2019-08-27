@@ -56,4 +56,4 @@ router.get('/', (req, res) => {
 });
 
 app.use('/', router);
-app.listen(process.env.PORT, () => console.log(`LISTENING ON -PORT ${process.env.PORT}`));
+app.listen(process.env.PORT || 5000, () => console.log(`LISTENING ON -PORT ${process.env.PORT}`));
