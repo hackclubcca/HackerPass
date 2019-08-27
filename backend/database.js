@@ -56,4 +56,4 @@ router.get('/', (req, res) => {
 });
 
 app.use('/', router);
-app.listen(API_PORT, () => console.log(`LISTENING ON -PORT ${API_PORT}`));
+app.listen(process.env.PORT, () => console.log(`LISTENING ON -PORT ${process.env.PORT}`));
