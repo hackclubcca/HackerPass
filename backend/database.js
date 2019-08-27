@@ -7,9 +7,9 @@ require('dotenv').config();
 
 const app = express();
 app.use(cors());
-app.use( bodyParser.json() );       // to support JSON-encoded bodies
-app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-  extended: true
+app.use(bodyParser.json()); // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
+    extended: true
 }));
 app.use(express.static(path.join(__dirname, '../build')));
 
@@ -44,15 +44,15 @@ function addData(data) {
 
 
 
+
+router.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', '../index.html'));
+});
+
 router.post('/data', (req, res) => {
     addData(req.body);
     return res.send(200)
-});
-
-router.get('/', (req, res) => {
-    console.log("Hello");
-    res.sendFile(path.join(__dirname, 'build', '../index.html'));
-});
+});;
 
 app.use('/', router);
 app.listen(process.env.PORT || 5000, () => console.log(`LISTENING ON -PORT ${process.env.PORT}`));

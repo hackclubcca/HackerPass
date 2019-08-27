@@ -45,6 +45,7 @@ class AppCollection extends React.Component {
                       </Navbar>
                     <Container>
                         <HackerForm/>
+                        <h3 id="footer-text">Made with ❤ in America's Finest City </h3>
                     </Container>
                 </div>
             );

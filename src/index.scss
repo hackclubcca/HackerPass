@@ -74,6 +74,9 @@ select {
     border-radius: 50px;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  option {
+    background: darken($background, 20);
+  }
 }
 
 label[required]:after {
@@ -85,7 +88,10 @@ label[required]:after {
     box-shadow: none;
 }
 .form-control:focus {
-  border-color: white !important;
+  &::placeholder {
+    color: $text-color;
+  }
+  border-color: $text-color !important;
   background: transparent !important;
 }
 
@@ -100,6 +106,29 @@ label[required]:after {
   width: 80vw !important;
   max-width: 350px;
   text-transform: uppercase;
+  border: none;
   background: $secondary-color !important;
   font-family: "Gilroy Bold";
+}
+
+div[role="alert"] {
+  margin-top: 10px;
+  color: white;
+  font-size: 18px;
+  border-radius: 25px;
+  font-family: "Gilroy Bold";
+  border: none;
+
+}
+.alert-danger {
+  background: #bd0012 !important;
+}
+.alert-success {
+  background: #05b937 !important;
+}
+#footer-text {
+  text-align: center;
+  font-family: "Gilroy Bold";
+  font-size: 18px;
+  margin-bottom: 20px;
 }

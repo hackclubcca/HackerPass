@@ -31,10 +31,10 @@ export const FORM_FIELDS =  [
         required: true
     },
     {
-        key: "date",
-        label: "What's your date of birth?",
-        type: "date",
-        default_value: "7/4/1776",
+        key: "grade",
+        label: "What grade are you in?",
+        type: "dropdown",
+        options: [10, 11, 12],
         required: true
     },
     {
@@ -69,5 +69,11 @@ export const FORM_FIELDS =  [
         default_value: "Your Resume",
         required: false
     },
-
+    {
+        key: "checkbox",
+        label: "I've verified my submission to be complete",
+        type: "checkbox",
+        default_value: "Complete?",
+        required: false
+    },
 ];

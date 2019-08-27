@@ -1,14 +1,12 @@
 import React from "react"
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
+import Alert from "react-bootstrap/Alert"
 import { FORM_FIELDS } from "./config/fields";
 import axios from 'axios';
 
 require('dotenv').config();
 const fields = FORM_FIELDS;
-
-
-let URL = process.env.ROOT_URL;
 
 
 class HackerForm extends React.Component {
@@ -26,6 +24,10 @@ class HackerForm extends React.Component {
 
     }
     handleChange = (event) => {
+        if (event.target.type == "textarea") {
+            let total = event.target.maxLength != -1 ? event.target.maxLength : 999;
+            document.getElementById(event.target.id+"-count").innerText = event.target.value.toString().length + "/" + total;
+        }
         let newState = Object.assign({}, this.state); // Clone the state obj in newState
         newState["values"][event.target.id] =  event.target.value;             // modify newState
         this.setState(newState);
@@ -35,6 +37,7 @@ class HackerForm extends React.Component {
         this.setState({validated: true});
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
+            this.setState({errors: true});
             event.preventDefault();
             event.stopPropagation();
         } else {
@@ -45,32 +48,45 @@ class HackerForm extends React.Component {
             }
             console.log(data);
             axios.post("/data",data);
+            this.setState({errors: false});
         }
     };
 
     render() {
         const fields = this.state.fields;
+
         return (
             <Form noValidate validated={this.state.validated} onSubmit={this.handleSubmit}>
+                {this.state.errors &&
+                    (<Alert variant="danger">Oops! You filled out one of the fields below incorrectly :(</Alert>)
+
+                }
                 {fields.map((value, index) => {
                     return (
-                        <Form.Group controlId={value.key}>
-                            <Form.Label required={value.required}>{value.label}</Form.Label>
+                        <Form.Group>
+                            {value.type != "checkbox" && (<Form.Label required={value.required}>{value.label}</Form.Label>)}
                             {value.type == "dropdown" ?
                                 (
-                                    <Form.Control as="select" className={"option"}>
+                                    <Form.Control id={value.key} as="select" className={"option"}>
                                         {value.options.map((option) => {
                                             return <option>{option}</option>;
                                         })}
                                     </Form.Control>
-                                ) : (
-                                    <Form.Control onChange={this.handleChange} required={value.required} type={value.type}
-                                              placeholder={value.default_value ? value.default_value : "Enter " + value.type}
-                                              name={value.key} className={"wow fadeInUp"}
-                                              as={value.type == "textarea" ? "textarea" : undefined} minlength={value.min_length} maxlength={value.max_length} min={value.min} max={value.max}/>
-                                    )
+                                ):value.type == "checkbox" ? (
+                                        <Form.Group controlId={value.key}>
+                                            <Form.Check type="checkbox" label={value.label} />
+                                          </Form.Group>
+                                ):(
+                                       <Form.Control id={value.key} onChange={this.handleChange} required={value.required} type={value.type}
+                                                 placeholder={value.default_value ? value.default_value : "Enter " + value.type}
+                                                 name={value.key} className={"wow fadeInUp"}
+                                                 as={value.type == "textarea" ? "textarea" : undefined} minLength={value.min_length} maxLength={value.max_length || 999} min={value.min} max={value.max}/>
+                                )
                             }
-                                </Form.Group>
+                            {value.type == "textarea" &&
+                                 <p id={value.key+"-count"}>0/{value.max_length || 999}</p>
+                             }
+                        </Form.Group>
                     )
                 })}
                 <div className="col-sm-12">
