@@ -35,8 +35,8 @@ class AppCollection extends React.Component {
                     <Navbar>
                         <Navbar.Brand href="#home">
                           <img
-                            width="60"
-                            height="60"
+                            width="80"
+                            height="80"
                             className="d-inline-block align-top"
                             alt="Name"
                             id="logo"

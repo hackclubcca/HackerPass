@@ -26,7 +26,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 16px;
+  margin: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -34,7 +35,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $primary-color;
+  background: $secondary-color;
   border-radius: 500px;
 }
 
@@ -47,7 +48,9 @@ body {
   font-family: "Gilroy Bold";
 }
 
-
+label {
+    font-size: 30px !important;
+}
 
 .form-control {
   font-size: 30px;
